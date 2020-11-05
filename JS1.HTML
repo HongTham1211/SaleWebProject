@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        input[type=text]
+        {
+            height: 15px;
+            border: #1b1d97 solid 2px;
+            border-radius: 20px;
+            padding: 3px;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Management System</h1> 
+    <form action="Detail.axps" value="" method="POST">
+        <div style="width: 400px;height: 430px;">
+            <div >
+                Employee ID
+                <input type="text" value="" size="20" name="employee"/><br/>
+                Employee Name
+                <input type="text" value="" size="20" name="name"/><br/>
+                Employee Address
+                <input type="text" value="" size="20" name="address"/><br/>
+                Phone Number
+                <input type="text" value="" size="20" name="phone"/><br/>
+                Designation
+                <select id="idselect">
+                    <option value="+">+</option>
+                    <option value="Staff" selected="selected">Staff</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select><br/>
+                Giới Tính 
+                <input type="radio" name="gtinh" id="nam"/> Nam
+                <input type="radio" name="gtinh" id="nu"/> Nữ <br/>
+             </div>
+                <input type="submit" value="View" size="20"> 
+        </div>
+    </form>
+</body>
+</html>

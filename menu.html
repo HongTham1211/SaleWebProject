@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The loai</title>
+</head>
+<body>
+    <script>
+function theloai(matl,tentl)
+{
+    this.matl=matl;
+    this.tentl=tentl;
+}
+var theloaiarr=
+[
+    new theloai("1" , "Sneaker"),
+    new theloai("2" , "Nike"),
+    new theloai("3" , "Gucci"),
+    new theloai("4" , "Balace")
+];
+var a;
+function hienthi1(obj)
+{
+    a=obj;
+    for(i=0;i<theloaiarr.length;i++)
+    {
+        if(a.id==i)
+        {
+            document.getElementById("menu").innerHTML='<div>Ban chọn '+theloaiarr[i].tentl+'</div>';
+			break;
+
+        }
+    }
+}
+function taomenu()
+{
+    var s="";
+    for(i=0;i<theloaiarr.length;i++)
+    {
+        a='<a href="bt.html?'+i+'&1"><div>';
+        s=s+a+theloaiarr[i].tentl+'</div></a>';
+    }
+    document.getElementById('menuchinh').innerHTML=s;
+}
+//cach 1:
+function hienthimenu()
+{ 
+    var s='';
+    var url = window.location.href;
+    var id =url.split('?');
+    id=parseInt(id[1]);
+    for(i=0;i<theloaiarr.length;i++)
+        if(id==i)
+        {
+            s='<div>Giày '+theloaiarr[i].tentl+'</div>';
+        }
+
+        console.log(s);
+            document.getElementById('content').innerHTML=s;
+    var id2=url.split('&');
+    id2=parseInt(id2[1]);
+    alert(id2);
+    for(i=0;i<theloaiarr.length;i++)
+        if(id2==i)
+        {
+            s='<div>Giày '+i+'</div>';
+        }
+            document.getElementById('tham').innerHTML=s;
+}
+    </script>
+    <div>
+		<a href="#"><div id='0' onclick="hienthi1(this);">Sneaker</div></a>
+		<a href="#"><div id='1' onclick="hienthi1(this);">Nike </div></a>
+		<a href="#"><div id='2' onclick="hienthi1(this);">Gucci</div></a>
+		<a href="#"><div id='3' onclick="hienthi1(this);">Balace</div></a>
+    </div>
+    <div id="menu">
+    </div>
+    <div id="tham"></div>
+</body>
+</html>

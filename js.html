@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tính Toán</title>
+    </style>
+</head>
+<body>
+    <script>
+        function  cach1()
+        {
+            var ten,soa,sob,kq,pt;
+            ten=document.frmtinhtoancb;
+            pt=document.getElementById('idselect').value;
+            console.log(pt);
+            soa=ten.soa.value;
+            sob=ten.sob.value;
+            switch(pt)
+            {
+                case('+'):
+                kq=parseInt(soa) + parseInt(sob); break;
+                case('-'):
+                kq=parseInt(soa) - parseInt(sob); break;
+                case('*'):
+                kq=parseInt(soa) * parseInt(sob); break;
+                case('/'):
+                kq=parseInt(soa) / parseInt(sob); break;
+            }
+            alert("ban dang su dung cach 1");
+            ten.txtKQua.value=kq;
+        }
+        function changecheckBOX(text)
+        {
+            var text1=text.value;
+            var s;
+            switch(text1)
+            {
+                case 'boiloi':
+                    s=Boxboiloi();
+                    break;
+                case 'vothuat':
+                    s=Boxvothuat();
+                    break;
+                default:
+                    s='';
+                    break;
+            }
+            var boxhtml=document.getElementById('checkBoxHTML');
+            boxhtml.innerHTML=s;
+        }
+        function Boxboiloi()
+        {
+            var kq;
+            kq='<input type="checkbox" id="sai" value="">Bơi sải' +
+            '<input type="checkbox" id="buom" value="">Bướm' +
+            '<input type="checkbox" id="cho" value="">Chó';
+            return kq;
+        }
+        function Boxvothuat()
+        {
+            var kq;
+            kq='<input type="checkbox" id="vovi" value="">vovinam' +
+            '<input type="checkbox" id="co" value="">cotruyen' +
+            '<input type="checkbox" id="tkd" value="">teakondo';
+            return kq;
+        }
+    </script>
+    <form action="tong2so.html" value="" name="frmtinhtoancb" method="GET">
+        SO_A <input type="text" id="txtsoa" name="soa" value=""/>
+        SO_B <input type="text" id="txtsob" name="sob" value=""/>
+        PHEPTINH <select name="select" id="idselect" onchange="cach1(this);">
+            <option value="+">+</option>
+            <option value="-" selected="selected">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        KQ <input type="text" value="" name="txtKQua" id="kqua"/>
+        <input type="button" value="ket qua" onclick="cach1();" name="btnkq"/>
+
+    </form>
+    combo box:
+    <select name="DSSoftWare">
+        <optgroup label="Multmedia">
+            <option value="WM10">Window Media 10</option>
+            <option value="JA9">Jet Audio 9</option>
+        </optgroup>
+        <optgroup label="Operation System">
+            <option value=WXP >Window XP</option>
+            <option value="WXPSP2">Window XP SP2</option>
+            <option value="WVP"> Window Vista</option>
+        </optgroup>
+        <option value="office 07">OFFice 2007</option>
+    </select>
+    <br/>
+    Sở thích: 
+    <select name="sothich" id="sothich" onchange="changecheckBOX(this);">
+        <optgroup label="chọn sở thích">
+            <option value="vothuat">võ thuật</option>
+            <option value="boiloi"> bơi lội</option>
+        </optgroup>
+    </select>
+    <div id="checkBoxHTML">
+    </div>
+</body>
+</html>

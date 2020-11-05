@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web ban hang </title>
+    <style>
+        .header
+        {
+            width: 100%;
+            color: #333300;
+            text-align: center;
+            height: 150px;
+            background-color:aquamarine;
+            position: relative;
+         }
+         #wrapper
+         {
+             border:#FF0000 solid 5px
+         }
+         .data
+         {
+            position: fixed;
+            top:auto;
+            left: 15px
+         }
+
+         .doan1
+         {
+             background-color: gold;
+             width: 100%;
+             height: 60%;
+             border:solid 3px #333300
+         }
+         
+         .doan2
+         {
+            width: 100%;
+            color: chartreuse;
+            text-align: center;
+            height: 500px;
+            background-color:darkblue;
+         }
+         li{
+             border:solid 3px #FF0000;
+         }
+         li:hover
+         {
+             background-color:lawngreen;
+             
+         }
+         ul{
+             list-style-position: inside;
+         }
+         a{
+            text-decoration:none;
+            color:green
+         }
+         .div a:hover{
+            background-color: hotpink;
+         }
+         
+    </style>
+</head>
+<body >
+    <div id="wrapper" >
+        <div class="header " >
+            HEADER
+            <img src="./img/canh.jpg" width="100px" heigh="100px" align="left" style="position: absolute; left: 50px; top: 10px;" />
+        </div >
+        <div class="doan1" >
+            <a href="#"><div style="float:left;width: 10%;border: solid 3px #FF0000">Trang chủ</div></a>
+            <a href="#"><div style="float:left;width: 15%;border: solid 3px #FF0000">Thông tin sản phẩm</div></a>
+            <a href="#"><div style="float:left;width: 15%;border: solid 3px #FF0000">Thông tin khách hàng</div></a>
+            <a href="#"><div style="float:left;width: 10%;border: solid 3px #FF0000">Đánh giá</div></a>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="doan2">
+            <div style="float: left; width: 20%;text-align: left;">
+                <div style="border:solid 1px #332500" >Thông báo</div>
+                <div style="border:solid 1px #332500" >Giải đáp thắc mắc</div>
+                <div style="border:solid 1px #332500" >Tâm sự</div>
+                <div style="border:solid 1px #332500" >Thông tin về trường</div>
+                <div style="margin-top: 15%; list-style-position:disc;">
+                    <ul>
+                        <li> <a href="#"> May tinh ASUS</a></li>
+                        <li><a href="#"> May tinh HP</a></li>
+                        <li><a href="#">May tinh LENOVO</a></li>
+                        <li><a href="#"> May tinh DELL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="float: left; width: 60%;background-color: #009999;">Content</div>
+            <div style="float: right; width: 20%;background-color: greenyellow;">Right</div>
+            <div style="clear: both;"></div>
+        </div>
+        <div style="width:100%;height: 150px;background-color:indigo;">Footer</div>
+     </div>
+</body>
+</html>
